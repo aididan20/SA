@@ -1,0 +1,33 @@
+$hero-height: 60vh;
+
+.heroImage {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/home1.jpg");
+min-height: $hero-height;
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+margin-bottom: 40px;
+}
+
+.heroText {
+text-align: center;
+justify-content: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+}
+
+@media (max-width: 800px) {
+    .heroImage {
+        display:none
+    }
+    @media (max-width: 800px) {
+      .heroText {
+        display: none;
+      }
+    }
+  }

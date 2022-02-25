@@ -1,0 +1,48 @@
+@use 'mixins';
+
+.header {
+  @include mixins.zentriert;
+  display: flex;
+  z-index: 9;
+  padding-bottom: 20px;
+  padding-top: 20px;
+	top: 0;
+  position: -webkit-sticky;
+	position: sticky!important;
+  background-color: white;
+  min-height: 80px;
+
+  a {
+    align-items: center;
+    font-weight: bold;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  a > span {
+    margin-left: 10px;
+    color: black;
+  }
+
+  .titleInHeader {
+    margin-left: 20px;
+    font-size: 12px;
+  }
+
+  .logoInHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+  }
+
+  .snipcart-summary {
+    //margin-right: 20px!important;
+  }
+
+  .preisU {
+    margin-right: 20px!important;
+    text-align: center
+  }
+}

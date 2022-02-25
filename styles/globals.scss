@@ -1,0 +1,64 @@
+@use 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.app {
+  min-height: 100vh;
+  min-width: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.background-image {
+  position: absolute;
+  opacity: 0.02;
+  left: -10vw;
+  top: -10vh;
+  height: 75vh;
+  transform: rotate(20deg);
+  pointer-events: none;
+}
+.product-list {
+  @include mixins.zentriert;
+}
+
+.promotional-message {
+  margin-bottom: 100px;
+  margin-top: 25px;
+  text-align: center;
+
+  h3 {
+    line-height: normal;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 100px;
+    @include mixins.mobile {
+      font-size: 50px;
+    }
+    margin: 0;
+    color: #000000;
+  }
+}
+
+.preisButton {
+  display: flex;
+  grid-area: button;
+}
